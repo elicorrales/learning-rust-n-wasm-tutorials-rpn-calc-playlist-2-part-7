@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <title>This is a test</title>
+        Hello There This Page Runs Javascript that loads/runs WASM....
+    </body>
+    <script>
+        debugger;
+        WebAssembly.instantiateStreaming(fetch('myfirst.wasm'))
+            .then(result => {
+            let rtn;
+            debugger;
+                rtn = result.instance.exports.calculate('+'.charCodeAt());
+                console.log(rtn);
+            debugger;
+                rtn = result.instance.exports.calculate('*'.charCodeAt());
+                console.log(rtn);
+            debugger;
+                rtn = result.instance.exports.calculate('$'.charCodeAt());
+                console.log(rtn);
+            debugger;
+                rtn = result.instance.exports.calculate(1);
+                console.log(rtn);
+            debugger;
+            })
+    </script>
+</html>
+                let rtn = result.instance.exports.calculate(1);
+                console.log(rtn);
+            debugger;
+            })
+    </script>
+</html>
